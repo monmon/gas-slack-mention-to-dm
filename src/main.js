@@ -27,6 +27,10 @@ function doPost(e) {
     return;
   }
 
+  if (e.parameter.user_id === dmUserId) {
+    return;
+  }
+
   var regExp = new RegExp(dmUserId);
   if (!regExp.test(e.parameter.text)) {
     return;
